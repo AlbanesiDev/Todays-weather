@@ -1,0 +1,67 @@
+@import "/src/sass/abstract/mixins";
+
+.weather-offcanvas.open {
+  transform: translateX(0);
+}
+.weather-offcanvas {
+  @include positionFixed(0, 0);
+  @include font(1.25em,1.25em,1.25em, $weight-semi-bold);
+  transform: translateX(100%);  width: 420px;
+  max-width: 75%;
+  height: 100vh;
+  background: $background-offcanvas;
+  box-shadow: $shadow-offcanvas;
+  transition: transform 0.3s ease-in-out;
+  padding: 2.5em 1.5rem;
+  z-index: 100;
+  @include flex(column, nowrap, flex-start);
+  .offcanvas__wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    .offcanvas__header {
+      @include flex(row, nowrap, space-between);
+      margin-bottom: 3rem;
+      &-title {
+        @include flex();
+        h2 {
+          @include font(1.25em,1.25em,1.25em, $weight-semi-bold);
+          margin-left: 0.5rem;
+          margin-bottom: 0;
+        }
+      }
+    }
+    .offcanvas__footer {
+      @include flex(column);
+      width: 100%;
+      gap: 1.25rem;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+.accordion {
+  .accordion-item {
+    background-color: transparent;
+    .accordion-header {
+      width: 100%;
+      .accordion-button {
+        @include font(0.5em, 0.5em,0.5em,400);
+        background-color: $background-card;
+      }
+    }
+    .accordion-wrapper {
+      padding: 1rem;
+      h3 {
+        @include font(0.5em, 0.5em,0.5em,400);
+      }
+      input {
+      }
+      label {
+        @include font(1em, 1em, 1em,400);
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+

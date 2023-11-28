@@ -1,0 +1,42 @@
+@import "/src/sass/abstract/mixins";
+
+.forecast__wrapper {
+  @include flex(row, wrap);
+  overflow: hidden;
+  width: 100%;
+}
+
+.forecast__block {
+  @include flex(column, nowrap);
+  height: 225px;
+  width: 14.25%;
+  .forecast__date {
+    @include font( $font-desktop-lg, $font-tablet-md, $font-mobile-sm, 600);
+  }
+  .forecast__info {
+    @include font( $font-desktop-lg, $font-tablet-md, $font-mobile-sm, 600);
+    text-align: center;
+    p {
+      margin: 0;
+    }
+    .forecast__icon {
+      @include flex;
+      img {
+        width: 45%;
+      }
+    }
+  }
+  .forecast__temp {
+    @include font( $font-desktop-lg, $font-tablet-md, $font-mobile-sm, 600);
+    text-align: center;
+    text-wrap: nowrap;
+  }
+}
+
+@include mediaQuery('desktop'){
+}
+@include mediaQuery('tablet'){
+
+}
+@include mediaQuery('mobile'){
+}

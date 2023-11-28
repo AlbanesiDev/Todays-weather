@@ -1,0 +1,89 @@
+.btn__outline {
+  @include font(1em, 1em, 1em, 400);
+  width: 100%;
+  height: 45px;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0.5rem;
+  box-shadow: $border-soft-btn;
+  &:hover,
+  &:active {
+    box-shadow: 0 0 0 4px #ffbce5;
+  }
+}
+
+.btn__solid--primary {
+  @include font(1em, 1em, 1em, 400);
+  width: 100%;
+  height: 50px;
+  background-color: $background-btn;
+  box-shadow: $border-soft-btn;
+  border: 0;
+  border-radius: 0.5rem;
+  &:hover,
+  &:active {
+  box-shadow: 0 0 0 4px #89c5f1;
+  }
+}
+
+.btn__close {
+  width: 28px;
+  height: 28px;
+  color: $color-icon;
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  transition: transform 0.5s;
+  svg {
+    width: 100%;
+  }
+  &:hover,
+  &:active {
+    color: rgba(255, 87, 87, 0.75);
+    transform: scale(1.15);
+  }
+}
+
+.btn__backward {
+  height: 35px;
+  width: 35px;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0.5rem;
+  display: flex;
+  padding: 0.25rem;
+  svg {
+    fill: $color-icon;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+  &:hover,
+  &:active {
+    color: rgba(0, 0, 0, 0.25);
+  }
+}
+
+.a__reset {
+  @include font(1em,1em,1em, 400);
+  width: 100%;
+  text-decoration: none;
+}
+
+.o__btn {
+  @include flex;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0.5rem;
+  z-index: 2;
+  svg {
+    fill: $color-icon;
+    pointer-events: none;
+  }
+  &:hover {
+    background-color: rgba(255, 0, 0, 0.25);
+  }
+}

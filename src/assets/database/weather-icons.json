@@ -1,0 +1,598 @@
+[
+  {
+    "id": 200,
+    "icon": "",
+    "name": "thunderstorm with light rain",
+    "pathImage": "/assets/icons/weather-icons/thunderstorms-rain.svg"
+  },
+  {
+    "id": 201,
+    "icon": "",
+    "name": "thunderstorm with rain",
+    "pathImage": "/assets/icons/weather-icons/thunderstorms-overcast-rain.svg"
+  },
+  {
+    "id": 202,
+    "icon": "",
+    "name": "thunderstorm with heavy rain",
+    "pathImage": "/assets/icons/weather-icons/thunderstorms-extreme-rain.svg"
+  },
+  {
+    "id": 210,
+    "icon": "",
+    "name": "light thunderstorm",
+    "pathImage": "/assets/icons/weather-icons/thunderstorms.svg"
+  },
+  {
+    "id": 211,
+    "icon": "",
+    "name": "thunderstorm",
+    "pathImage": "/assets/icons/weather-icons/thunderstorm-overcast.svg"
+  },
+  {
+    "id": 212,
+    "icon": "",
+    "name": "heavy thunderstorm",
+    "pathImage": "/assets/icons/weather-icons/thunderstorms-extreme.svg"
+  },
+  {
+    "id": 221,
+    "icon": "",
+    "name": "ragged thunderstorm",
+    "pathImage": "/assets/icons/weather-icons/thunderstorms-rain.svg"
+  },
+  {
+    "id": 230,
+    "icon": "",
+    "name": "thunderstorm with light drizzle",
+    "pathImage": "/assets/icons/weather-icons/thunderstorms-overcast-rain.svg"
+  },
+  {
+    "id": 231,
+    "icon": "",
+    "name": "thunderstorm with drizzle",
+    "pathImage": "/assets/icons/weather-icons/thunderstorm-overcast.svg"
+  },
+  {
+    "id": 232,
+    "icon": "",
+    "name": "thunderstorm with heavy drizzle",
+    "pathImage": "/assets/icons/weather-icons/thunderstorms-extreme-rain.svg"
+  },
+
+  {
+    "id": 300,
+    "icon": "09n",
+    "name": "light intensity drizzle",
+    "pathImage": "/assets/icons/weather-icons/drizzle.svg"
+  },
+  {
+    "id": 301,
+    "icon": "",
+    "name": "drizzle",
+    "pathImage": "/assets/icons/weather-icons/drizzle.svg"
+  },
+  {
+    "id": 302,
+    "icon": "",
+    "name": "heavy intensity drizzle",
+    "pathImage": "/assets/icons/weather-icons/rain.svg"
+  },
+  {
+    "id": 310,
+    "icon": "",
+    "name": "light intensity drizzle rain",
+    "pathImage": "/assets/icons/weather-icons/hail.svg"
+  },
+  {
+    "id": 311,
+    "icon": "",
+    "name": "drizzle rain",
+    "pathImage": "/assets/icons/weather-icons/drizzle.svg"
+  },
+  {
+    "id": 312,
+    "icon": "",
+    "name": "heavy intensity drizzle rain",
+    "pathImage": "/assets/icons/weather-icons/rain.svg"
+  },
+  {
+    "id": 313,
+    "icon": "",
+    "name": "shower rain and drizzle",
+    "pathImage": "/assets/icons/weather-icons/rain.svg"
+  },
+  {
+    "id": 314,
+    "icon": "",
+    "name": "heavy shower rain and drizzle",
+    "pathImage": "/assets/icons/weather-icons/rain.svg"
+  },
+  {
+    "id": 321,
+    "icon": "",
+    "name": "shower drizzle",
+    "pathImage": "/assets/icons/weather-icons/rain.svg"
+  },
+
+  {
+    "id": 500,
+    "icon": "",
+    "name": "light rain",
+    "pathImage": "/assets/icons/weather-icons/overcast-drizzle.svg"
+  },
+  {
+    "id": 501,
+    "icon": "",
+    "name": "moderate rain",
+    "pathImage": "/assets/icons/weather-icons/overcast-hail.svg"
+  },
+  {
+    "id": 502,
+    "icon": "",
+    "name": "heavy intensity rain",
+    "pathImage": "/assets/icons/weather-icons/overcast-rain.svg"
+  },
+  {
+    "id": 503,
+    "icon": "",
+    "name": "very heavy rain",
+    "pathImage": "/assets/icons/weather-icons/overcast-rain.svg"
+  },
+  {
+    "id": 504,
+    "icon": "",
+    "name": "extreme rain",
+    "pathImage": "/assets/icons/weather-icons/extreme-rain.svg"
+  },
+  {
+    "id": 511,
+    "icon": "",
+    "name": "freezing rain",
+    "pathImage": "/assets/icons/weather-icons/overcast-sleet.svg"
+  },
+  {
+    "id": 520,
+    "icon": "",
+    "name": "light intensity shower rain",
+    "pathImage": "/assets/icons/weather-icons/extreme-drizzle.svg"
+  },
+  {
+    "id": 521,
+    "icon": "",
+    "name": "shower rain",
+    "pathImage": "/assets/icons/weather-icons/extreme-hail.svg"
+  },
+  {
+    "id": 522,
+    "icon": "",
+    "name": "heavy intensity shower rain",
+    "pathImage": "/assets/icons/weather-icons/extreme-rain.svg"
+  },
+  {
+    "id": 531,
+    "icon": "",
+    "name": "ragged shower rain",
+    "pathImage": "/assets/icons/weather-icons/extreme-drizzle.svg"
+  },
+
+  {
+    "id": 600,
+    "icon": "",
+    "name": "light snow",
+    "pathImage": "/assets/icons/weather-icons/snow.svg"
+  },
+  {
+    "id": 601,
+    "icon": "",
+    "name": "snow",
+    "pathImage": "/assets/icons/weather-icons/snow.svg"
+  },
+  {
+    "id": 602,
+    "icon": "",
+    "name": "heavy snow",
+    "pathImage": "/assets/icons/weather-icons/overcast-snow.svg"
+  },
+  {
+    "id": 611,
+    "icon": "",
+    "name": "sleet",
+    "pathImage": "/assets/icons/weather-icons/sleet.svg"
+  },
+  {
+    "id": 612,
+    "icon": "",
+    "name": "light shower sleet",
+    "pathImage": "/assets/icons/weather-icons/sleet.svg"
+  },
+  {
+    "id": 613,
+    "icon": "",
+    "name": "shower sleet",
+    "pathImage": "/assets/icons/weather-icons/overcast-sleet.svg"
+  },
+  {
+    "id": 615,
+    "icon": "",
+    "name": "light rain and snow",
+    "pathImage": "/assets/icons/weather-icons/overcast-sleet.svg"
+  },
+  {
+    "id": 616,
+    "icon": "",
+    "name": "rain and snow",
+    "pathImage": "/assets/icons/weather-icons/overcast-sleet.svg"
+  },
+  {
+    "id": 620,
+    "icon": "",
+    "name": "light shower snow",
+    "pathImage": "/assets/icons/weather-icons/overcast-sleet.svg"
+  },
+  {
+    "id": 621,
+    "icon": "",
+    "name": "shower snow",
+    "pathImage": "/assets/icons/weather-icons/sleet.svg"
+  },
+  {
+    "id": 622,
+    "icon": "",
+    "name": "heavy shower snow",
+    "pathImage": "/assets/icons/weather-icons/extreme-sleet.svg"
+  },
+
+  {
+    "id": 701,
+    "icon": "",
+    "name": "mist",
+    "pathImage": "/assets/icons/weather-icons/mist.svg"
+  },
+  {
+    "id": 711,
+    "icon": "",
+    "name": "smoke",
+    "pathImage": "/assets/icons/weather-icons/smoke.svg"
+  },
+  {
+    "id": 721,
+    "icon": "",
+    "name": "haze",
+    "pathImage": "/assets/icons/weather-icons/haze.svg"
+  },
+  {
+    "id": 731,
+    "icon": "",
+    "name": "sand/dust whirls",
+    "pathImage": "/assets/icons/weather-icons/dust-wind.svg"
+  },
+  {
+    "id": 741,
+    "icon": "",
+    "name": "fog",
+    "pathImage": "/assets/icons/weather-icons/fog.svg"
+  },
+  {
+    "id": 751,
+    "icon": "",
+    "name": "sand",
+    "pathImage": "/assets/icons/weather-icons/dust-wind.svg"
+  },
+  {
+    "id": 761,
+    "icon": "",
+    "name": "dust",
+    "pathImage": "/assets/icons/weather-icons/dust.svg"
+  },
+  {
+    "id": 762,
+    "icon": "",
+    "name": "volcanic ash",
+    "pathImage": "/assets/icons/weather-icons/mist.svg"
+  },
+  {
+    "id": 771,
+    "icon": "",
+    "name": "squalls",
+    "pathImage": "/assets/icons/weather-icons/wind.svg"
+  },
+  {
+    "id": 781,
+    "icon": "",
+    "name": "tornado",
+    "pathImage": "/assets/icons/weather-icons/tornado.svg"
+  },
+  {
+    "id": 800,
+    "icon": "01d",
+    "name": "clear sky",
+    "pathImage": "/assets/icons/weather-icons/clear-day.svg"
+  },
+  {
+    "id": 800,
+    "icon": "01n",
+    "name": "clear sky",
+    "pathImage": "/assets/icons/weather-icons/clear-night.svg"
+  },
+  {
+    "id": 801,
+    "icon": "02d",
+    "name": "few clouds: 11-25%",
+    "pathImage": "/assets/icons/weather-icons/partly-cloudy-day.svg"
+  },
+  {
+    "id": 801,
+    "icon": "02n",
+    "name": "few clouds: 11-25%",
+    "pathImage": "/assets/icons/weather-icons/partly-cloudy-night.svg"
+  },
+  {
+    "id": 802,
+    "icon": "03d",
+    "name": "scattered clouds: 25-50%",
+    "pathImage": "/assets/icons/weather-icons/overcast-day.svg"
+  },
+  {
+    "id": 802,
+    "icon": "03n",
+    "name": "scattered clouds: 25-50%",
+    "pathImage": "/assets/icons/weather-icons/overcast-night.svg"
+  },
+  {
+    "id": 803,
+    "icon": "04d",
+    "name": "broken clouds: 51-84%",
+    "pathImage": "/assets/icons/weather-icons/extreme-day.svg"
+  },
+  {
+    "id": 803,
+    "icon": "04n",
+    "name": "broken clouds: 51-84%",
+    "pathImage": "/assets/icons/weather-icons/extreme-night.svg"
+  },
+  {
+    "id": 804,
+    "icon": "05d",
+    "name": "overcast clouds: 85-100%",
+    "pathImage": "/assets/icons/weather-icons/extreme.svg"
+  },
+  {
+    "id": 804,
+    "icon": "05n",
+    "name": "overcast clouds: 85-100%",
+    "pathImage": "/assets/icons/weather-icons/extreme.svg"
+  },
+
+  {
+    "id": 900,
+    "icon": "",
+    "name": "moon new",
+    "pathImage": "/assets/icons/weather-icons/moon-new.svg"
+  },
+  {
+    "id": 901,
+    "icon": "",
+    "name": "moon waxing crescent",
+    "pathImage": "/assets/icons/weather-icons/moon-waxing-crescent.svg"
+  },
+  {
+    "id": 902,
+    "icon": "",
+    "name": "moon waxing gibbous",
+    "pathImage": "/assets/icons/weather-icons/moon-waxing-gibbous.svg"
+  },
+  {
+    "id": 903,
+    "icon": "",
+    "name": "moon first quarter",
+    "pathImage": "/assets/icons/weather-icons/moon-first-quarter.svg"
+  },
+  {
+    "id": 904,
+    "icon": "",
+    "name": "moon full",
+    "pathImage": "/assets/icons/weather-icons/moon-full.svg"
+  },
+  {
+    "id": 905,
+    "icon": "",
+    "name": "moon waning gibbous",
+    "pathImage": "/assets/icons/weather-icons/moon-waning-gibbous.svg"
+  },
+  {
+    "id": 906,
+    "icon": "",
+    "name": "moon waning crescent",
+    "pathImage": "/assets/icons/weather-icons/moon-waning-crescent.svg"
+  },
+  {
+    "id": 907,
+    "icon": "",
+    "name": "moon last quarter",
+    "pathImage": "/assets/icons/weather-icons/moon-last-quarter.svg"
+  },
+
+  {
+    "id": 910,
+    "icon": "",
+    "name": "uv index",
+    "pathImage": "/assets/icons/weather-icons/uv-index.svg"
+  },
+  {
+    "id": 911,
+    "icon": "",
+    "name": "uv index 1",
+    "pathImage": "/assets/icons/weather-icons/uv-index-1.svg"
+  },
+  {
+    "id": 912,
+    "icon": "",
+    "name": "uv index 2",
+    "pathImage": "/assets/icons/weather-icons/uv-index-2.svg"
+  },
+  {
+    "id": 913,
+    "icon": "",
+    "name": "uv index 3",
+    "pathImage": "/assets/icons/weather-icons/uv-index-3.svg"
+  },
+  {
+    "id": 914,
+    "icon": "",
+    "name": "uv index 4",
+    "pathImage": "/assets/icons/weather-icons/uv-index-4.svg"
+  },
+  {
+    "id": 915,
+    "icon": "",
+    "name": "uv index 5",
+    "pathImage": "/assets/icons/weather-icons/uv-index-5.svg"
+  },
+  {
+    "id": 916,
+    "icon": "",
+    "name": "uv index 6",
+    "pathImage": "/assets/icons/weather-icons/uv-index-6.svg"
+  },
+  {
+    "id": 917,
+    "icon": "",
+    "name": "uv index 7",
+    "pathImage": "/assets/icons/weather-icons/uv-index-7.svg"
+  },
+  {
+    "id": 918,
+    "icon": "",
+    "name": "uv index 8",
+    "pathImage": "/assets/icons/weather-icons/uv-index-8.svg"
+  },
+  {
+    "id": 919,
+    "icon": "",
+    "name": "uv index 9",
+    "pathImage": "/assets/icons/weather-icons/uv-index-9.svg"
+  },
+  {
+    "id": 920,
+    "icon": "",
+    "name": "uv index 10",
+    "pathImage": "/assets/icons/weather-icons/uv-index-10.svg"
+  },
+  {
+    "id": 921,
+    "icon": "",
+    "name": "uv index 11",
+    "pathImage": "/assets/icons/weather-icons/uv-index-11.svg"
+  },
+
+  {
+    "id": 1000,
+    "icon": "",
+    "name": "not available",
+    "pathImage": "/assets/icons/weather-icons/not-available.svg"
+  },
+  {
+    "id": 1001,
+    "icon": "",
+    "name": "thermometer",
+    "pathImage": "/assets/icons/weather-icons/thermometer.svg"
+  },
+  {
+    "id": 1002,
+    "icon": "",
+    "name": "humidity",
+    "pathImage": "/assets/icons/weather-icons/humidity.svg"
+  },
+  {
+    "id": 1003,
+    "icon": "",
+    "name": "wind",
+    "pathImage": "/assets/icons/weather-icons/wind.svg"
+  },
+  {
+    "id": 1004,
+    "icon": "",
+    "name": "compass",
+    "pathImage": "/assets/icons/weather-icons/compass.svg"
+  },
+  {
+    "id": 1005,
+    "icon": "",
+    "name": "raindrops",
+    "pathImage": "/assets/icons/weather-icons/raindrops.svg"
+  },
+  {
+    "id": 1006,
+    "icon": "",
+    "name": "pressure",
+    "pathImage": "/assets/icons/weather-icons/barometer.svg"
+  },
+
+  {
+    "id": 1010,
+    "icon": "",
+    "name": "code green",
+    "pathImage": "/assets/icons/weather-icons/code-green.svg"
+  },
+  {
+    "id": 1012,
+    "icon": "",
+    "name": "code yellow",
+    "pathImage": "/assets/icons/weather-icons/code-yellow.svg"
+  },
+  {
+    "id": 1013,
+    "icon": "",
+    "name": "code orange",
+    "pathImage": "/assets/icons/weather-icons/code-orange.svg"
+  },
+  {
+    "id": 1014,
+    "icon": "",
+    "name": "code red",
+    "pathImage": "/assets/icons/weather-icons/code-red.svg"
+  },
+  {
+    "id": 1015,
+    "icon": "",
+    "name": "alert avalanche danger",
+    "pathImage": "/assets/icons/weather-icons/alert-avalanche-danger.svg"
+  },
+  {
+    "id": 1016,
+    "icon": "",
+    "name": "alert falling rocks",
+    "pathImage": "/assets/icons/weather-icons/alert-falling-rocks.svg"
+  },
+  {
+    "id": 1017,
+    "icon": "",
+    "name": "wind alert",
+    "pathImage": "/assets/icons/weather-icons/wind-alert.svg"
+  },
+  {
+    "id": 1018,
+    "icon": "",
+    "name": "flag gale warning",
+    "pathImage": "/assets/icons/weather-icons/flag-gale-warning.svg"
+  },
+  {
+    "id": 1019,
+    "icon": "",
+    "name": "flag small craft advisory",
+    "pathImage": "/assets/icons/weather-icons/flag-small-craft-advisory.svg"
+  },
+  {
+    "id": 1020,
+    "icon": "",
+    "name": "flag storm warning",
+    "pathImage": "/assets/icons/weather-icons/flag-storm-warning.svg"
+  },
+  {
+    "id": 1021,
+    "icon": "",
+    "name": "flag hurricane warning",
+    "pathImage": "/assets/icons/weather-icons/flag-hurricane-warning.svg"
+  }
+]

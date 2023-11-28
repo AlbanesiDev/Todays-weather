@@ -1,0 +1,78 @@
+@include mediaQuery("mobile") {
+  .header {
+    @include flex(row, nowrap, space-between);
+    width: 100%;
+    .btn__header {
+      height: 35px;
+      width: 35px;
+      background-color: transparent;
+      border: 0;
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: $color-icon;
+        padding: 0;
+      }
+    }
+    .col__1,
+    .col__2 {
+      @include flex;
+      gap: 0 0rem;
+    }
+  }
+}
+
+@include mediaQuery("tablet") {
+  .header {
+    @include flex(row, nowrap, space-between);
+    width: 100%;
+    .btn__header {
+      height: 40px;
+      width: 40px;
+      background-color: transparent;
+      border: 0;
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: $color-icon;
+        padding: 0;
+      }
+    }
+    .col__1,
+    .col__2 {
+      @include flex;
+      gap: 0 1rem;
+    }
+  }
+}
+
+@include mediaQuery("desktop") {
+  .header {
+    @include flex(row, nowrap, space-between);
+    width: 100%;
+    .btn__header {
+      height: 45px;
+      width: 45px;
+      background-color: transparent;
+      border: 0;
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: $color-icon;
+        padding: 0;
+      }
+    }
+    .col__1,
+    .col__2 {
+      @include flex;
+      gap: 0 1rem;
+    }
+  }
+}
+
+.header__date {
+  @include font(1.5rem,1.25rem,1rem, 500, $color-text-soft);
+  margin-top: 0.85rem;
+  text-transform: capitalize;
+  text-wrap: nowrap;
+}

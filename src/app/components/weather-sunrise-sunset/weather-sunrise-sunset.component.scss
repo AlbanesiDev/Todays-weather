@@ -1,0 +1,59 @@
+@import "/src/sass/abstract/mixins";
+.row {
+  height: 100%;
+}
+.sunrise-sunset__block {
+  @include flex;
+  width: 100%;
+  height: 100%;
+  .sunrise-sunset__text,
+  .sunrise-sunset__date {
+    white-space: nowrap;
+    margin: 0;
+  }
+}
+@include mediaQuery("desktop") {
+  .sunrise-sunset__container {
+    height: 150px;
+    .sunrise-sunset__block {
+      @include font(1.65em,1.65em, 1.65em,  $weight-semi-bold);
+    }
+    .sunrise-sunset__text {
+      padding-right: 1.25rem;
+    }
+    .sunrise-sunset__svg {
+      width: 3rem;
+      margin-right: 0.5rem;
+    }
+  }
+}
+@include mediaQuery("tablet") {
+  .sunrise-sunset__container {
+    height: 100px;
+    .sunrise-sunset__block {
+      @include font(1.45em,1.45em,1.45em, $weight-semi-bold);
+    }
+    .sunrise-sunset__text {
+      padding-right: 0.5rem;
+    }
+    .sunrise-sunset__svg {
+      width: 2rem;
+      margin-right: 0.25rem;
+    }
+  }
+}
+@include mediaQuery("mobile") {
+  .sunrise-sunset__container {
+    height: 60px;
+    .sunrise-sunset__block {
+      @include font(0.75em,0.75em,0.75em, $weight-bold);
+    }
+    .sunrise-sunset__text {
+      padding-right: 0.25rem;
+    }
+    .sunrise-sunset__svg {
+      width: 1.5rem;
+      margin-right: 0;
+    }
+  }
+}

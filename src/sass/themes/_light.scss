@@ -1,0 +1,27 @@
+@mixin lighten() {
+  --BgBackgroundApp: #f3f3f3;
+  --BgBackgroundCard: #ffffff;
+  --BgBackgroundTab: #f3f3f3;
+  --BgBackgroundBtn: #e5e5e5;
+  --BgBackgroundOffcanvas: #ffffff;
+
+  --BgBorderSoft: 4px solid rgba(0, 0, 0, 0.1);
+  --BgBorderSoftBtn: 0 0 0 4px rgba(0, 0, 0, 0.1);
+
+  --BgText: #000000;
+  --BgTextInvert: #000000;
+  --BgTextSoft: rgb(100, 100, 100);
+
+  --BgShadowBox: 0 0 0 4px rgba(0, 0, 0, 0.1);
+  --BgShadowCard: 0 0 0 4px rgba(0, 0, 0, 0.1);
+  --BgShadowOffcanvas: 0 0 25px rgba(0, 0, 0, 0.15);
+
+  --BgIcon: #000000;
+  --BgInvertColorIcon: 0;
+
+  --BgCarouselIndicatorActive: #000000;
+
+  --BgScrollBarBorder: 3px solid rgba(0, 0, 0, 0.25);
+  --BgScrollBarThumbColor: #ffffff;
+  --BgScrollBarTrackColor: #ffffff;
+}

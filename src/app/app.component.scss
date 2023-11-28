@@ -1,0 +1,62 @@
+@import "/src/sass/abstract/mixins";
+
+$container-app-styles: (
+  "desktop": (
+    "padding": 2.5rem calc(1rem + 15vw),
+    "gap": 2rem
+  ),
+  "tablet": (
+    "padding": 2.5rem calc(1rem + 5vw),
+    "gap": 1.25rem
+  ),
+  "mobile": (
+    "padding": 0 0.5rem,
+    "gap": 1.5rem
+  )
+);
+
+.container__app {
+  position: relative;
+  display: grid;
+  grid-auto-flow: row;
+  background-color: $background-app;
+  transition: padding 0.25s;
+  @each $breakpoint, $styles in $container-app-styles {
+    @include mediaQuery($breakpoint) {
+      padding: map-get($styles, "padding");
+      gap: map-get($styles, "gap");
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "app-header"
+        "weather-current"
+        "weather-forecast-hourly"
+        "weather-sunrise-sunset"
+        "weather-forecast-daily"
+        "weather-aqi";
+      .app-header {
+        grid-area: app-header;
+      }
+      .weather-current {
+        grid-area: weather-current;
+        padding: 0.25rem;
+        height: 340px;
+        overflow: hidden;
+      }
+      .weather-forecast-hourly {
+        grid-area: weather-forecast-hourly;
+        height: 233px;
+        overflow: hidden;
+      }
+      .weather-forecast-daily {
+        grid-area: weather-forecast-daily;
+      }
+      .weather-sunrise-sunset {
+        grid-area: weather-sunrise-sunset;
+      }
+      .weather-aqi {
+        grid-area: weather-aqi;
+      }
+    }
+  }
+}

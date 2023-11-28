@@ -1,0 +1,6 @@
+<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+  <input type="radio" class="btn-check" name="btnRadioTheme" id="btnRadioDARK" autocomplete="off" [checked]="isDarkModeChecked()" (change)="toggleMode('dark')">
+  <label class="btn btn-outline-primary" for="btnRadioDARK">Dark</label>
+  <input type="radio" class="btn-check" name="btnRadioTheme" id="btnRadioLIGHT" autocomplete="off" [checked]="isLightModeChecked()" (change)="toggleMode('light')">
+  <label class="btn btn-outline-primary" for="btnRadioLIGHT">Light</label>
+</div>

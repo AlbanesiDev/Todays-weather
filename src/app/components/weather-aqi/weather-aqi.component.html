@@ -1,0 +1,143 @@
+<div class="aqi bg-card">
+  <div class="d-flex justify-content-between align-items-center">
+    <h2 class="aqi__title">Calidad del aire</h2>
+    <button class="btn__aqi-question" (click)="openQuestion()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+        <path
+          d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+      </svg>
+    </button>
+  </div>
+  <div class="aqi__header">
+    <h2 class="aqi__header-main" [style.color]="getAqiColor()">
+      {{ getICA() | number:'1.0-0'}}
+    </h2>
+    <div>
+      <span class="aqi__header-main-caption">{{ aqiLevel }}</span>
+      <p class="aqi__header-caption">
+        {{ aqiCaption }}
+      </p>
+    </div>
+  </div>
+  <div class="aqi-bar">
+    <div class="aqi-level good"></div>
+    <div class="aqi-level moderate"></div>
+    <div class="aqi-level unhealthy-fsg"></div>
+    <div class="aqi-level unhealthy"></div>
+    <div class="aqi-level very-unhealthy"></div>
+    <div class="aqi-level hazardous"></div>
+    <span class="select" [ngStyle]="{ 'left.%': getSelectLeftPosition() }"></span>
+  </div>
+  <div class="aqi-number">
+    <span *ngFor="let item of aqiSteps">{{ item }}</span>
+  </div>
+  <div class="aqi-data">
+    <div class="data">
+      <p>CO: <span>{{ aqiCO}}</span></p>
+    </div>
+    <div class="data">
+      <p>SO<sub>2</sub>: <span>{{ aqiSO }}</span></p>
+    </div>
+    <div class="data">
+      <p>NO<sub>2</sub>: <span>{{ aqiNO }}</span></p>
+    </div>
+    <div class="data">
+      <p>PM<sub>10</sub>: <span>{{ aqiPM10 }}</span></p>
+    </div>
+    <div class="data">
+      <p>PM<sub>2.5</sub>: <span>{{ aqiPM25 }}</span></p>
+    </div>
+    <div class="data">
+      <p>O<sub>3</sub>: <span>{{ aqiO3 }}</span></p>
+    </div>
+  </div>
+  <div class="aqi__question" [class.active]="openQuestionCard">
+    <div class="aqi__question-header">
+      <h2 class="aqi__question-header-title">Informacion sobre el aire</h2>
+      <button class="btn__close" (click)="closeQuestion()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+          <path
+            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+        </svg>
+      </button>
+    </div>
+
+    <ul class="nav nav-tabs mb-4" *ngIf="aqiTabVisible">
+      <li class="nav-item">
+        <button class="nav-link" [class.active]="aqiTab" (click)="toggleTab()">Descripcion</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" [class.active]="!aqiTab" (click)="toggleTab()">Tabla</button>
+      </li>
+    </ul>
+
+    <div class="row">
+      <div class="col__1" [class.active]="aqiTabDescription" *ngIf="aqiTabDescription">
+        <div class="aqi__description">
+          <p>
+            El Índice de Calidad del Aire (AQI) es una medida estandarizada que proporciona información sobre la calidad
+            del aire en una ubicación específica. Se calcula teniendo en cuenta varios contaminantes atmosféricos y
+            sirve como indicador de la salud general del aire que respiramos.
+            Contaminantes Principales:
+            <br>
+            <br>
+            <u>Dióxido de Azufre (SO2):</u>
+            Origen: Combustión de combustibles fósiles, procesos industriales.
+            Efectos: Irritación de ojos y vías respiratorias, contribuye a la formación de lluvia ácida.
+            <br>
+            <br>
+            <u>Dióxido de Nitrógeno (NO2):</u>
+            Origen: Emisiones vehiculares, procesos industriales.
+            Efectos: Irritación de vías respiratorias, contribuye a la formación de smog y lluvia ácida.
+            <br>
+            <br>
+            <u>Partículas en Suspensión PM10:</u>
+            Origen: Actividades industriales, construcción, emisiones vehiculares.
+            Efectos: Problemas respiratorios, impacto en la salud cardiovascular.
+            <br>
+            <br>
+            <u>Partículas en Suspensión PM2.5:</u>
+            Origen: Quema de combustibles fósiles, actividades industriales.
+            Efectos: Penetración profunda en el sistema respiratorio, problemas cardiovasculares, riesgo de enfermedades
+            pulmonares.
+            <br>
+            <br>
+            <u>Ozono (O3):</u>
+            Origen: Reacciones químicas entre contaminantes, emisiones de vehículos.
+            Efectos: Irritación de ojos y vías respiratorias, problemas respiratorios, contribuye a la formación de
+            smog.
+            <br>
+            <br>
+            <u>Monóxido de Carbono (CO):</u>
+            Origen: Emisiones vehiculares, combustión incompleta de combustibles.
+            Efectos: Reducción en la capacidad de transporte de oxígeno en la sangre, riesgo de intoxicación.
+            <br>
+            <br>
+            Monitorear estos contaminantes y entender el AQI es crucial para evaluar la calidad del aire y tomar medidas
+            para proteger la salud pública y el medio ambiente.
+            <br>
+            <br>
+            <br>
+            <br>
+          </p>
+        </div>
+      </div>
+      <div class="col__2" [class.active]="aqiTabTable" *ngIf="aqiTabTable">
+        <div class="table__wrapper">
+          <table class="my-table">
+            <tr>
+              <td>Calidad</td>
+              <td>Index</td>
+              <td colspan="6">Concentración de contaminantes en μg/m3</td>
+            </tr>
+            <tr *ngFor="let row of aqiTable">
+              <td *ngFor="let cell of row">{{ cell }}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

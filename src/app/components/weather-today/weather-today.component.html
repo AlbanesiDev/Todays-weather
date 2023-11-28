@@ -1,0 +1,127 @@
+<div class="bg-card">
+  <swiper-container
+    grab-cursor="false"
+    slide-per-view="1"
+    pagination="true"
+    pagination-clickable="true"
+    navigation="true"
+    [ngStyle]="getSwiperStyles()"
+  >
+    <swiper-slide>
+      <div class="weather-today">
+        <div class="col-6">
+          <div class="weather__info">
+            <span class="weather__info-date"> {{ formattedDate }}</span>
+            <span class="weather__info-temp"> {{ currentTemp }}° </span>
+            <span class="weather__info-city">
+              {{ weatherBitCurrent.city_name }}
+            </span>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="weather__icon">
+            <img
+              class="weather__icon-img"
+              [src]="weatherIcon"
+              alt="{{ weatherOWMCurrent.weather[0].description }}"
+            />
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="icon__container">
+        <div class="icon__1">
+          <p class="icon__title">Precipitación</p>
+          <div class="icon__img-container">
+            <object
+              class="icon__img"
+              data="assets/icons/weather-data-icons/raindrop-measure.svg"
+              type="image/svg+xml"
+            ></object>
+          </div>
+          <p class="icon__date">{{ weatherBitCurrent.precip }}%</p>
+        </div>
+        <div class="icon__2">
+          <p class="icon__title">Presión</p>
+          <div class="icon__img-container">
+            <object
+              class="icon__img"
+              data="assets/icons/weather-data-icons/barometer.svg"
+              type=""
+            ></object>
+          </div>
+          <p class="icon__date">{{ weatherBitCurrent.pres }} hPa</p>
+        </div>
+        <div class="icon__3">
+          <p class="icon__title">Radiación UV</p>
+          <div class="icon__img-container">
+            <object
+              class="icon__img"
+              data="assets/icons/weather-data-icons/clear-day.svg"
+              type=""
+            ></object>
+          </div>
+          <p class="icon__date">
+            {{ weatherBitCurrent.uv | number : "1.0-1" }}{{ uvCategory }}
+          </p>
+        </div>
+        <div class="icon__4">
+          <p class="icon__title">Viento</p>
+          <div class="icon__img-container">
+            <object
+              class="icon__img"
+              data="assets/icons/weather-data-icons/wind.svg"
+              type=""
+            ></object>
+          </div>
+          <p class="icon__date">{{ weatherBitCurrent.wind_spd }} Km/h</p>
+        </div>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="icon__container">
+        <div class="icon__1">
+          <p class="icon__title">Humedad</p>
+          <div class="icon__img-container">
+            <object
+              class="icon__img"
+              data="assets/icons/weather-data-icons/humidity.svg"
+            ></object>
+          </div>
+          <p class="icon__date">{{ weatherOWMCurrent.main.humidity }}%</p>
+        </div>
+        <div class="icon__2">
+          <p class="icon__title">Máxima</p>
+          <div class="icon__img-container">
+            <object
+              class="icon__img"
+              data="assets/icons/weather-data-icons/thermometer-warmer.svg"
+            ></object>
+          </div>
+          <p class="icon__date">{{ weatherOWMCurrent.main.temp_max }}°C</p>
+        </div>
+        <div class="icon__3">
+          <p class="icon__title">Mínima</p>
+          <div class="icon__img-container">
+            <object
+              class="icon__img"
+              data="assets/icons/weather-data-icons/thermometer-colder.svg"
+            ></object>
+          </div>
+          <p class="icon__date">{{ weatherOWMCurrent.main.temp_min }}°C</p>
+        </div>
+        <div class="icon__4">
+          <p class="icon__title">Visibilidad</p>
+          <div class="icon__img-container">
+            <object
+              class="icon__img"
+              data="assets/icons/weather-data-icons/compass.svg"
+            ></object>
+          </div>
+          <p class="icon__date">{{ weatherBitCurrent.vis }} Km</p>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</div>

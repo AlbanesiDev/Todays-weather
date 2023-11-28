@@ -1,0 +1,34 @@
+@import "/src/sass/abstract/mixins";
+
+swiper-container {
+  height: 233px !important;
+  width: 100%;
+  swiper-slide {
+    width: 100px !important;
+    height: 233px;
+    padding-top: 4px;
+    padding-left: 4px;
+    margin-right: 1.25rem;
+  }
+}
+
+.forecast__card {
+  @include flex(column, nowrap, space-between);
+  width: 100px;
+  height: 225px;
+  &-weather {
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+  }
+  &-img {
+    overflow: hidden;
+    filter: $shadow-icon;
+  }
+  &-weather,
+  &-temp,
+  &-time {
+    @include font(1em, 1em, 1em, 400);
+    margin: 0;
+  }
+}

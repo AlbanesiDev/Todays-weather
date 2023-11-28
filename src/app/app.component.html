@@ -1,0 +1,43 @@
+<div class="container-fluid container__app">
+  <app-offcanvas></app-offcanvas>
+  <div class="app-header">
+    <header class="header">
+      <div class="col__1">
+        <p class="header__date">{{ currentTime }} AM</p>
+      </div>
+      <div class="col__2">
+        <button type="button" class="btn__header" (click)="openOffcanvas()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+  </div>
+  <div class="weather-current">
+    <app-weather-today></app-weather-today>
+  </div>
+  <div class="weather-forecast-hourly">
+    <app-weather-forecast-hourly></app-weather-forecast-hourly>
+  </div>
+  <div class="weather-sunrise-sunset">
+    <app-weather-sunrise-sunset></app-weather-sunrise-sunset>
+  </div>
+  <div class="weather-forecast-daily">
+    <app-weather-forecast-daily></app-weather-forecast-daily>
+  </div>
+  <div class="weather-aqi">
+    <app-weather-aqi></app-weather-aqi>
+  </div>
+  <div class="app-footer">
+    <footer class="footer">
+      <div class="d-flex justify-content-center">
+        <p>Copyright © 2023 | AlbanesiDev</p>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a class="mx-2" href="#" >Politica de privacidad</a>
+        <a class="ms-2" href="#">Terminos y condiciones</a>
+      </div>
+    </footer>
+  </div>
+</div>

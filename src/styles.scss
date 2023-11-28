@@ -1,0 +1,21 @@
+@import 'sass/themes/dark';
+@import 'sass/themes/light';
+@import 'sass/variables/variables-color';
+@import 'sass/variables/variables-font';
+@import 'sass/variables/variables-spacing';
+@import 'sass/base/reset';
+@import 'sass/base/typography';
+@import 'sass/abstract/mixins';
+@import 'sass/components/cards';
+@import 'sass/components/buttons';
+@import 'sass/components/offcanvas';
+@import 'sass/components/scrollbar';
+@import 'sass/layout/header';
+@import 'sass/layout/footer';
+
+body.dark {
+  @include darken();
+}
+body.light {
+  @include lighten();
+}

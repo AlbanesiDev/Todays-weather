@@ -1,0 +1,8 @@
+@import '/src/sass/abstract/mixins';
+
+.container {
+  @include flex(column, nowrap, center, center);
+  background-color: red;
+  width: 100%;
+  height: 100%;
+}

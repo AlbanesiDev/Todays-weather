@@ -1,0 +1,56 @@
+@import "/src/sass/variables/variables-font";
+@import "/src/sass/variables/variables-color";
+@import "/src/sass/variables/variables-spacing";
+
+@mixin flex( $direction: row , $wrap: nowrap, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin mediaQuery($breakpoint) {
+  @if $breakpoint == "tablet" {
+    @media (min-width: 768px) and (max-width: 1023px) {
+      @content;
+    }
+  } @else if $breakpoint == "mobile" {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $breakpoint == "desktop" {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' no válido. Use 'tablet', 'mobile' o 'desktop'.";
+  }
+}
+@mixin positionAbsolute($pTop: auto, $pRight: auto, $pBottom: auto, $pLeft: auto) {
+  position: absolute;
+  top: $pTop;
+  right: $pRight;
+  bottom: $pBottom;
+  left: $pLeft;
+}
+@mixin positionFixed($pTop: auto, $pRight: auto, $pBottom: auto, $pLeft: auto) {
+  position: Fixed;
+  top: $pTop;
+  right: $pRight;
+  bottom: $pBottom;
+  left: $pLeft;
+}
+@mixin font($size-desktop: 1em, $size-tablet: 1em, $size-mobile: 1em, $font-weight, $color: $color-text ) {
+  @include mediaQuery('desktop'){
+    font-size: $size-desktop;
+  }
+  @include mediaQuery('tablet'){
+    font-size: $size-tablet;
+  }
+  @include mediaQuery('mobile'){
+    font-size: $size-mobile;
+  }
+  color: $color;
+  font-weight: $font-weight;
+  font-family: 'quicksand', serif;
+}

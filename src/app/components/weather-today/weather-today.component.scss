@@ -1,0 +1,102 @@
+@import "/src/sass/abstract/mixins";
+
+$weather-current-styles: (
+  "mobile": (
+    "padding": 1.5rem,
+    "date-font-size": 1em,
+    "temp-font-size": 4.5em,
+    "city-font-size": 1.25em,
+    "icon-padding-left": calc(5vw - 1.5rem),
+    "icon-width": 5em,
+    "icon-title": 0.85em,
+    "icon-date": 1em,
+  ),
+  "tablet": (
+    "padding": 1.5rem,
+    "date-font-size": 1em,
+    "temp-font-size": 4.5em,
+    "city-font-size": 1.5em,
+    "icon-padding-left": calc(10vw - 2.5rem),
+    "icon-width": 7em,
+    "icon-title": 1em,
+    "icon-date": 1.25em,
+  ),
+  "desktop": (
+    "padding": 1.5rem 5rem,
+    "date-font-size": 1.5em,
+    "temp-font-size": 6em,
+    "city-font-size": 1.75em,
+    "icon-padding-left": calc(10vw - 2.5rem),
+    "icon-width": 10em,
+    "icon-title": 1.25em,
+    "icon-date": 1.5em,
+  ),
+);
+
+.icon__container {
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  gap: 0;
+  grid-auto-flow: row;
+  grid-template-areas: "icon__1 icon__2 icon__3 icon__4";
+
+  @for $i from 1 through 8 {
+    .icon__#{$i} {
+      @each $breakpoint, $styles in $weather-current-styles {
+        @include mediaQuery($breakpoint) {
+          @include flex(column);
+          pointer-events: none;
+          grid-area: icon__#{$i};
+          .icon__title {
+            margin-top: 0.85rem;
+            @include font(map-get($styles, "icon-title"),1em, 1em, $weight-bold);
+          }
+          .icon__date {
+            @include font(map-get($styles, "icon-date"),1em, 1em, $weight-bold);
+          }
+          .icon__img-container {
+            @include flex;
+            height: 135px;
+            overflow: hidden;
+            .icon__img {
+              width: map-get($styles, "icon-width");
+              margin-bottom: 1rem;
+              filter: invert($color-icon-invert);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.weather-today {
+  overflow: hidden;
+  @each $breakpoint, $styles in $weather-current-styles {
+    @include mediaQuery($breakpoint) {
+      @include flex;
+      height: 300px;
+      background-color: $background-card;
+      border-radius: 1rem;
+      padding: map-get($styles, "padding");
+      .weather__info {
+        @include flex(column, nowrap, center, flex-start);
+        &-date {
+          @include font(map-get($styles, "date-font-size"),1em, 1em, $weight-bold);
+          text-transform: capitalize;
+        }
+        &-temp {
+          @include font(map-get($styles, "temp-font-size"),1em, 1em, $weight-medium);
+        }
+        &-city {
+          @include font(map-get($styles, "city-font-size"),1em, 1em, $weight-bold);
+        }
+      }
+      .weather__icon {
+        padding-left: map-get($styles, "icon-padding-left");
+      }
+    }
+  }
+}

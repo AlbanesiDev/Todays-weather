@@ -1,0 +1,27 @@
+<div class="container">
+  <div *ngIf="menuState.notification">
+    <button class="btn__forward" (click)="forward('notification'); showBtn()">Regresar</button>
+    Contenido de Notificaciones
+  </div>
+  <div *ngIf="menuState.units">
+    <button class="btn__forward" (click)="forward('units')" (click)="showBtn()">Regresar</button>
+    Contenido de Unidades
+  </div>
+  <div *ngIf="menuState.theme">
+    <button class="btn__forward" (click)="forward('theme')" (click)="showBtn()">Regresar</button>
+    Contenido de Tema
+    <app-theme></app-theme>
+  </div>
+  <div *ngIf="menuState.icons">
+    <button class="btn__forward" (click)="forward('icons')" (click)="showBtn()">Regresar</button>
+    Contenido de Paquete de iconos
+  </div>
+  <div *ngIf="menuState.language">
+    <button class="btn__forward" (click)="forward('language')" (click)="showBtn()">Regresar</button>
+    Contenido de Idioma
+  </div>
+  <div *ngIf="menuState.about">
+    <button class="btn__forward" (click)="forward('about')" (click)="showBtn()">Regresar</button>
+    Contenido de Acerca de
+  </div>
+</div>

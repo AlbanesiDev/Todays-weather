@@ -1,0 +1,21 @@
+<div class="bg-card">
+  <div class="forecast__wrapper">
+    <ng-container *ngFor="let item of weatherForecast">
+      <div class="forecast__block col-">
+        <div class="forecast__date">
+          {{ item.datetime | translateDay }}
+        </div>
+        <div class="forecast__info">
+          <div class="forecast__icon">
+            <img [src]="getWeatherIconPath(item.weather.code)" alt="{{item.weather.description}}">
+          </div>
+          <p>{{ item.weather.description }}</p>
+        </div>
+        <div class="forecast__temp">
+          {{ item.app_max_temp | temperaturePipe: temperatureService.isFahrenheit }}º -
+          {{ item.app_min_temp | temperaturePipe: temperatureService.isFahrenheit }}{{ temperatureService.isFahrenheit ? '°F' : '°C' }}
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

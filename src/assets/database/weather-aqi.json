@@ -1,0 +1,38 @@
+[
+  {
+    "steps": [0, 50],
+    "color": "a2dc61",
+    "level": "Buena",
+    "caption": "La calidad del aire es buena."
+  },
+  {
+    "steps": [50, 100],
+    "color": "fbd651",
+    "level": "Admisible",
+    "caption": "La calidad del aire es aceptable."
+  },
+  {
+    "steps": [100, 150],
+    "color": "fd9a57",
+    "level": "Insalubre para personas Sensibles",
+    "caption": "Las personas sensibles pueden experimentar efectos sobre su salud."
+  },
+  {
+    "steps": [150, 200],
+    "color": "ff6a6e",
+    "level": "Mala",
+    "caption": "Todas las personas pueden comnezar a experimentar efectos sobre su salud."
+  },
+  {
+    "steps": [200, 250, 300],
+    "color": "a97bbc",
+    "level": "Muy Mala",
+    "caption": "Alerta sanitaria: Todo el munedo puede experimentar efectos graves de salud."
+  },
+  {
+    "steps": [300, 350, 400, 450, 500],
+    "color": "9b5973",
+    "level": "Peligrosa",
+    "caption": "Advertencias sanitarias de condiciones de emergencia."
+  }
+]

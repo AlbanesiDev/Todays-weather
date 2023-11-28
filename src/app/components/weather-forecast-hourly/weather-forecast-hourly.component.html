@@ -1,0 +1,14 @@
+<swiper-container grab-cursor="true" slides-per-view="auto">
+  <swiper-slide *ngFor="let item of weatherForecast">
+    <div class="forecast__card bg-card">
+      <p class="forecast__card-time">{{ item.dt_txt | date : "HH:mm" }}</p>
+      <img [src]="getWeatherIconPath(item.weather[0].id, item.weather[0].icon)" alt="{{ item.weather[0].description }}" />
+      <p class="forecast__card-temp">
+        {{ item.main.temp | temperaturePipe: temperatureService.isFahrenheit  | number : "1.0-0" }}{{ temperatureService.isFahrenheit ? '°F' : '°C' }}
+      </p>
+      <p class="forecast__card-weather">
+        {{ item.wind.speed | number : "1.0-1" }} Km/h
+      </p>
+    </div>
+  </swiper-slide>
+</swiper-container>

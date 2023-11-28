@@ -1,0 +1,10 @@
+.footer {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  p {
+    @include font(1.5rem, 1.25rem, 1.15rem, 500, $color-text-soft);
+  }
+  a {
+    @include font(1.15rem, 1rem, 0.75rem, 500, #0a5ad4);
+  }
+}

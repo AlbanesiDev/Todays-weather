@@ -1,0 +1,298 @@
+@import "/src/sass/abstract/mixins";
+
+$colors: #a2dc61, #fbd651, #fd9a57, #ff6a6e, #a97bbc, #9b5973;
+$widths: 10%, 10%, 10%, 10%, 20%, 40%;
+$positions-colors: 0, 10%, 20%, 30%, 40%, 60%;
+$position-numbers: 0.5%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 98.8%;
+
+.aqi {
+  position: relative;
+  height: 450px;
+  padding: $padding-md $padding-xl;
+  overflow: hidden;
+  .aqi__title {
+    @include font($font-desktop-lg, $font-tablet-md, $font-mobile-md, $weight-semi-bold, $color-text-soft);
+    text-transform: uppercase;
+  }
+  .aqi__header {
+    @include flex(row, nowrap, flex-start);
+    gap: $gap-xl;
+    margin-bottom: $margin-xl;
+
+    &-main {
+      @include font(4.5em, 4.5em, 4.5em, $weight-semi-bold);
+    }
+
+    &-main-caption {
+      @include font($font-desktop-xl, $font-tablet-xl, $font-mobile-lg, $weight-bold);
+    }
+
+    &-caption {
+      @include font($font-desktop-lg, $font-tablet-lg, $font-mobile-md, $weight-regular);
+      margin: 0;
+    }
+  }
+  &-bar {
+    position: relative;
+    border-radius: $border-radius-sm;
+    box-shadow: $shadow-box;
+    @for $i from 1 through length($colors) {
+      $color: nth($colors, $i);
+      $width: nth($widths, $i);
+      $left: nth($positions-colors, $i);
+
+      .aqi-level:nth-child(#{$i}) {
+        @include positionAbsolute(0, auto, auto, $left);
+        background-color: $color;
+        width: $width;
+        height: 100%;
+
+        @if $i == 1 {
+          border-top-left-radius: $border-radius-sm;
+          border-bottom-left-radius: $border-radius-sm;
+        }
+
+        @if $i == length($colors) {
+          border-top-right-radius: $border-radius-sm;
+          border-bottom-right-radius: $border-radius-sm;
+        }
+      }
+    }
+    .select {
+      position: absolute;
+      top: -5px;
+      background-color: #ffffff;
+      border-radius: $border-radius-xs;
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.75);
+      z-index: 10;
+    }
+  }
+  &-number {
+    @include font($font-desktop-lg, $font-tablet-md, 0.65rem, $weight-regular);
+    position: relative;
+    height: 20px;
+    span {
+      position: absolute;
+      top: 0;
+      transform: translateX(-50%);
+    }
+    @for $i from 1 through length($position-numbers) {
+      $position: nth($position-numbers, $i);
+      $left: $position;
+      span:nth-child(#{$i}) {
+        left: $left;
+      }
+    }
+  }
+  &-data {
+    @include flex(row, wrap);
+    border-top: $border-soft;
+    padding-top: 2.75rem;
+
+    @include mediaQuery("desktop") {
+      margin: $margin-xxl 0 $margin-lg 0;
+      gap: $gap-sm;
+    }
+    @include mediaQuery("tablet") {
+      margin: $margin-xxl 0 $margin-lg 0;
+      gap: $gap-sm;
+    }
+    @include mediaQuery("mobile") {
+      margin: $margin-xxl 0 $margin-md 0;
+      gap: $gap-md;
+    }
+
+    .data {
+      width: 25%;
+      text-align: center;
+      text-wrap: nowrap;
+      p {
+        @include font($font-desktop-lg, $font-tablet-lg, $font-mobile-md, $weight-regular);
+        margin: 0;
+      }
+      span {
+        @include font($font-desktop-md, $font-tablet-md, $font-mobile-md, $weight-semi-bold);
+      }
+    }
+  }
+  .btn__aqi-question {
+    @include flex;
+    border: 0;
+    background-color: transparent;
+    color: rgba(70, 200, 255, 0.8);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    padding: 0;
+    transition: all 0.25s;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+    &:hover,
+    &:active {
+      transform: scale(1.15);
+    }
+  }
+}
+.aqi__question {
+  @include positionAbsolute(0, 0);
+  width: 100%;
+  height: 454px;
+  background: $background-card;
+  padding: $padding-md $padding-xl;
+  transition: transform 0.5s;
+  transform: translateX(100%);
+  z-index: 100;
+  &.active {
+    transform: translateX(0);
+  }
+  &-header {
+    @include flex(row, nowrap, space-between);
+    margin-bottom: $margin-md;
+    &-title {
+      @include font($font-desktop-lg, $font-tablet-md, $font-mobile-md, $weight-semi-bold, $color-text-soft);
+      text-transform: uppercase;
+      margin: 0;
+    }
+  }
+  .nav-tabs {
+    .nav-item {
+      .nav-link {
+        @include font(1em, 1.25em, 1em, $weight-semi-bold, $color-text-soft);
+        &.active {
+          color: $color-text-invert;
+          background-color: $background-tab;
+        }
+      }
+    }
+  }
+  .table__wrapper {
+    box-shadow: $shadow-box;
+    border-radius: $border-radius-sm;
+    width: 100%;
+    overflow: auto;
+    table {
+      @include font($font-desktop-md, $font-tablet-sm, $font-mobile-xs, $weight-regular, #000000);
+      border-collapse: collapse;
+      width: 100%;
+      td,
+      th {
+        text-align: left;
+        transition: all 0.25s;
+        border: 1px solid #6f6f6f40;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.25);
+        }
+      }
+      td:nth-child(1),
+      tr:first-child,
+      tr:nth-child(2) {
+        background-color: $background-table;
+        color: #ffffff;
+      }
+      tr:nth-child(3) {
+        background-color: nth($colors, 1);
+      }
+      tr:nth-child(4) {
+        background-color: nth($colors, 2);
+      }
+      tr:nth-child(5) {
+        background-color: nth($colors, 3);
+        text-wrap: balance;
+      }
+      tr:nth-child(6) {
+        background-color: nth($colors, 4);
+      }
+      tr:nth-child(7) {
+        background-color: nth($colors, 5);
+      }
+    }
+  }
+  .aqi__description {
+    @include font($font-desktop-lg, $font-tablet-md, $font-mobile-md, $weight-regular);
+    overflow-y: auto;
+    height: 368px;
+    u {
+      text-decoration: underline;
+    }
+  }
+}
+@include mediaQuery("desktop") {
+  .aqi {
+    .btn__aqi-question {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+    .aqi-bar {
+      height: 40px;
+      .select {
+        height: 50px;
+        width: 10px;
+      }
+    }
+    .aqi-number {
+      margin-top: 0.75rem;
+    }
+  }
+  .table__wrapper {
+    td {
+      padding: 0.5rem;
+    }
+  }
+}
+@include mediaQuery("tablet") {
+  .aqi {
+    .btn__aqi-question {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+    .aqi-bar {
+      height: 30px;
+      .select {
+        height: 40px;
+        width: 8.5px;
+      }
+      .aqi-number {
+        margin-top: 0.75rem;
+      }
+    }
+  }
+  .table__wrapper {
+    td {
+      padding: 0.25rem;
+    }
+  }
+}
+@include mediaQuery("mobile") {
+  .aqi {
+    .btn__aqi-question {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    .aqi-bar {
+      height: 20px;
+      .select {
+        height: 30px;
+        width: 7px;
+      }
+    }
+    .aqi-number {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .table__wrapper {
+    td {
+      padding: 0.25rem;
+    }
+  }
+}
+@media (min-width: 1720px) {
+  .col__1 {
+    width: 40%;
+  }
+  .col__2 {
+    width: 60%;
+  }
+}
