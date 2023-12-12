@@ -3,9 +3,12 @@
   <br>
   <a href="https://todays-weather-2023.web.app" target="_blank"><img src="https://live.staticflickr.com/65535/53361255299_213f2c7731_o.png" alt="Todays Weather" width="200"></a>
   <br>
+  <br>
   Today's Weather
   <br>
+  <br>
 </h1>
+  <br>
 
 <p align="center">
   <a href="#Funcionalidades">Funcionalidades</a> •
