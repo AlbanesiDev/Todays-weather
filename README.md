@@ -15,7 +15,6 @@
   <a href="#Tecnologías-utilizadas">Tecnologías utilizadas</a> •
   <a href="#Instalación-y-uso">Instalación y uso</a> •
   <a href="#Contribuciones">Contribuciones</a> •
-  <a href="#Certificados">Certificados</a>
 </p>
 
 <br>
